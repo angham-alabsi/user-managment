@@ -1,0 +1,233 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+$font-color:#afb5bb ;
+$card-bg-color:#42434873 ;
+
+body {
+    font-family: "Karla", sans-serif;
+    font-family: 'Cairo', sans-serif;
+    background-color: #202124;
+    min-height: 100vh;
+    color: $font-color;
+}
+
+.brand-wrapper {
+    margin-bottom: 19px;
+
+    .logo {
+        height: 37px;
+    }
+}
+
+.login-card {
+    border: .1px solid #d9edff;
+    border-radius: 27.5px;
+    // box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
+    overflow: hidden;
+
+
+    &-img {
+        border-radius: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .card-body {
+        padding: 85px 60px 60px;
+        background-color: #d9edff;
+
+        @media (max-width: 422px) {
+            padding: 35px 24px;
+        }
+    }
+
+    &-description {
+        font-size: 25px;
+        color: #1a202c;
+        font-weight: normal;
+        margin-bottom: 23px;
+    }
+
+    form {
+        max-width: 326px;
+    }
+
+    .form-control {
+        border: 1px solid #d5dae2;
+        padding: 15px 25px;
+        // margin-bottom: 20px;
+        min-height: 45px;
+        font-size: 13px;
+        line-height: 15;
+        font-weight: normal;
+        background-color: #d9edff;
+
+        &::placeholder {
+            color: #919aa3;
+        }
+    
+    }
+    .form-control:focus {
+        color: #000;
+        background-color: #d9edff;
+    }
+
+    .login-btn {
+        padding: 13px 20px 12px;
+        background-color: #000;
+        border-radius: 4px;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 20px;
+        color: #fff;
+        margin-bottom: 24px;
+
+        &:hover {
+            border: 1px solid #000;
+            background-color: transparent;
+            color: #000;
+        }
+    }
+
+    .forgot-password-link {
+        font-size: 14px;
+        color: #919aa3;
+        margin-bottom: 12px;
+    }
+
+    &-footer-text {
+        font-size: 16px;
+        color: #0d2366;
+        margin-bottom: 60px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &-footer-nav {
+        a {
+            font-size: 14px;
+            color: #919aa3;
+        }
+    }
+}
+.text-reset{
+    color: #2460da !important;
+}
+.login-card-img2{
+    background-color: #1a202c;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/login2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.lang{
+    position: absolute;
+    top: 0;
+    padding: 20px 40px;
+    a{
+        color: #fff;
+        text-decoration:none;
+    }
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #161b22;
+    box-shadow: 0 0 1px 0 grey;
+}
+.navbar-brand{
+    margin: 0 2rem;
+}
+.nav-link{
+    color: rgb(175 181 187);
+}
+.nav-link:hover, .nav-link:focus {
+    color: #fff;
+}
+.nav-link-op{
+    padding: 0 10px;
+    color: rgb(175 181 187);
+    text-decoration: none;
+}
+.nav-link-op:hover{
+    color:#fff;
+}
+.btn-dark {
+    color: $font-color;
+    background-color: #212529;
+    border-color: $font-color;
+}
+.btn-dark:hover {
+    color: #fff;
+    background-color: #212529;
+    border-color: #fff;
+}
+.table-dark{
+    color: $font-color;
+}
+.table > :not(:first-child) {
+    border-top: 1.5px solid currentColor;
+}
+.card-dark{
+    padding: 30px;
+    background-color: #252629;
+    box-shadow: 0 0 2px 0 grey;
+
+}
+.input-dark{
+    background-color: $card-bg-color;
+    border: 1px solid $card-bg-color;
+}
+.page-link{
+    background-color: $card-bg-color;
+    color: $font-color;
+}
+.page-item.active .page-link{
+    color: #fff;
+    background-color: #87898d;
+    border-color: #ffffff;
+}
+.page-item.disabled .page-link{
+    background-color: $card-bg-color;
+    color: $font-color;
+}
+.form-control:focus {
+    color: #fff;
+    background-color: #323337;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1040px;
+    }
+}
+
+
