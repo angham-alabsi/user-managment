@@ -59,7 +59,7 @@
                                         <a class="nav-link-op" href="{{ route('register') }}" class="">{{__('main.register')}}</a>
                                     @endif
                                 @endauth
-                            </div>
+                            </div>knlkn
                         @endif
                     </div>
               </div>
