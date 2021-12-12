@@ -126,7 +126,8 @@ class UserController extends Controller
         return redirect(route('admin.users.index'));
     }
 
-    public function profile(){
-        return view('admin.users.profile');
+    public function profile($id){
+        // return $id;
+        return view('admin.users.profile',['roles'=>Role::all(),'user'=>User::find($id)]);
     }
 }

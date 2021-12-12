@@ -199,6 +199,9 @@ body {
     background-color: $card-bg-color;
     color: $font-color;
 }
+.form-control{
+    color: $font-color;
+}
 .form-control:focus {
     color: #fff;
     background-color: #323337;

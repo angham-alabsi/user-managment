@@ -47,7 +47,7 @@
                         @if (Route::has('login'))
                             <div class="px-5">
                                 @auth
-                                    <a class="nav-link-op" href="{{ route('admin.profile') }}">{{__('main.profile')}}</a>
+                                    <a class="nav-link-op" href="{{ route('admin.profile',['id'=>Auth::user()->id]) }}">{{__('main.profile')}}</a>
                                     <a class="nav-link-op" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">{{__('main.logout')}}</a>
                                     <form action="{{route('logout')}}" method="POST" id="logout-form" style="display: none">
                                         @csrf

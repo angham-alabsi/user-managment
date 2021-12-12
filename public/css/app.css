@@ -11487,6 +11487,10 @@ body {
   color: #afb5bb;
 }
 
+.form-control {
+  color: #afb5bb;
+}
+
 .form-control:focus {
   color: #fff;
   background-color: #323337;

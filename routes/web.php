@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Admin\UserController;
+use App\Http\Controllers\Admin\UserController as AdminUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,7 @@ Route::group([
                         Route::get('/home', function () { return view('home'); })->name('home');
                         Route::prefix('admin')->middleware(['auth.isAdmin'])->name('admin.')->group(function(){
                                 route::resource('users',UserController::class);
-                                route::get('profile',[UserController::class,'profile'])->name('profile');
+                                route::get('profile/{id}',[AdminUserController::class,'profile'])->name('profile');
 
                         });
                 });
