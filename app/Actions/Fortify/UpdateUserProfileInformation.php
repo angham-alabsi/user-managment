@@ -20,7 +20,6 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
-
             'email' => [
                 'required',
                 'string',
@@ -33,11 +32,15 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
         if ($input['email'] !== $user->email &&
             $user instanceof MustVerifyEmail) {
             $this->updateVerifiedUser($user, $input);
+            // $input->roles()->sync($input->roles);
+
         } else {
             $user->forceFill([
                 'name' => $input['name'],
                 'email' => $input['email'],
             ])->save();
+
+            $user->roles()->sync($input['roles']);
         }
     }
 
@@ -50,11 +53,14 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
      */
     protected function updateVerifiedUser($user, array $input)
     {
+        // return $input ;
+
         $user->forceFill([
             'name' => $input['name'],
             'email' => $input['email'],
             'email_verified_at' => null,
         ])->save();
+        $user->roles()->sync($input['roles']);
 
         $user->sendEmailVerificationNotification();
     }
